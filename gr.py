@@ -14,6 +14,8 @@ class Ground():
         self.rect1.bottom = 100
         self.rect.x = 0
         self.rect.y = 500
+        self.rect1.x = 0
+        self.rect1.y = 500
         self.rect1.left = self.rect.right
         self.speed = speed
 
@@ -24,3 +26,9 @@ class Ground():
     def update(self):
         self.rect.left += self.speed
         self.rect1.left += self.speed
+
+        if self.rect.right < 0:
+            self.rect.left = self.rect1.right
+
+        if self.rect1.right < 0:
+            self.rect1.left = self.rect.right

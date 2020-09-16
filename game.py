@@ -23,10 +23,10 @@ def run():
             # Закрытие окна на крестик или Alt+F4
             if i.type == pygame.QUIT:
                 running = False
-
+        screen.fill(backgound_color)
         new_ground.draw()
-        #new_ground.update()
-        #pygame.time.delay(20)
+        new_ground.update()
+        pygame.time.delay(20)
         pygame.display.update()
 
 
